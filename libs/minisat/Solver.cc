@@ -494,7 +494,7 @@ void Solver::uncheckedEnqueue(Lit p, CRef from)
     assert(value(p) == l_Undef);
     assigns[var(p)] = lbool(!sign(p));
     vardata[var(p)] = mkVarData(from, decisionLevel());
-    trail.push_(p);
+    trail.push(p);
 }
 
 
